@@ -38,7 +38,6 @@ export default function ShortenLink() {
       body: JSON.stringify(body),
     })
       .then((response) => {
-        console.log(response.ok);
         if (!response.ok) {
           setError(true);
           throw new Error("Please add a link");
@@ -49,19 +48,16 @@ export default function ShortenLink() {
         setError(false);
         setLongUrl("");
 
-        console.log(json.short_url);
         setShortUrls([...shortUrls, json]);
       })
       .catch((err) => {
         console.log(err);
       });
-    console.log("Submit");
   }
 
   useEffect(() => {
     navigator.clipboard.readText().then((text) => {
       if (text) {
-        console.log(text);
         setCopiedValue(text);
       }
     });
