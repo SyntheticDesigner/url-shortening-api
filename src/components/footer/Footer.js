@@ -1,8 +1,8 @@
 import React from "react";
 import { FooterWrapper } from "./FooterStyled";
 import NavList from "./NavList";
-import { ReactComponent as Logo } from "../../images/logo.svg";
 import SocialIcons from "./SocialIcons";
+import { StyledLogo } from "./FooterStyled";
 
 const navLists = [
   {
@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <div className='content'>
-        <Logo style={{ fill: "white", marginRight: "12%" }} />
+        <StyledLogo />
         {navLists.map((list, i) => (
           <NavList key={i} data={list} />
         ))}

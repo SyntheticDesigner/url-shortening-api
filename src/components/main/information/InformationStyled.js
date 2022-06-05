@@ -3,16 +3,20 @@ import styled from "styled-components";
 export const StatsWrapper = styled.div`
   text-align: center;
   max-width: 580px;
-  margin: 32px auto;
+  margin: -20px auto 0px;
 
   h1 {
-    font-size: 3em;
+    font-size: min(max(2vw, 2em), 3em);
     color: var(--font-color-primary);
     margin-bottom: 16px;
   }
   p {
     font-size: 1.2em;
     color: var(--font-color-secondary);
+    @media (max-width: 900px) {
+      width: 90%;
+      margin: auto;
+    }
   }
 `;
 
@@ -30,7 +34,15 @@ export const AboutWrapper = styled.div`
     margin: auto;
     padding: 4px;
     background-color: var(--brand-primary);
-    transform: translateY(30px)
+    transform: translateY(30px);
+    @media (max-width: 900px) {
+      flex-direction: column;
+      width: 4px;
+      height: 80%;
+    }
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
   }
 `;
 
@@ -40,7 +52,9 @@ export const AboutCardWrapper = styled.div`
   padding: 0px 32px 40px;
   transform: translateY(${({ extraMargin }) => `${extraMargin}px`});
   margin-top: ${({ extraMargin }) => `${extraMargin}px`};
-  height: 310px;
+  height: fit-content;
+  min-height: 310px;
+  display: grid;
   img {
     padding: 20px;
     background-color: var(--bg-brand);
@@ -52,5 +66,12 @@ export const AboutCardWrapper = styled.div`
     color: var(--font-color-secondary);
     font-size: 1.1em;
     line-height: 1.5em;
+  }
+  @media (max-width: 900px) {
+    transform: translateY(0);
+    max-width: 90%;
+    img {
+      margin: 0px auto;
+    }
   }
 `;

@@ -7,14 +7,14 @@ const CTAWrapper = styled.div`
   display: grid;
   place-items: center;
   gap: 40px;
-  padding: 60px;
+  padding: 60px 0px;
   background-color: var(--bg-brand);
   background-image: url(${bgDesktop});
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   h1 {
-    font-size: 2.5em;
+    font-size: min(max(5vw, 1.7em), 2.5em);
   }
   button {
     color: white;
