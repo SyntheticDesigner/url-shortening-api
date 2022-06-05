@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ShortenLinkForm } from "./ShortenLinkStyled";
+import { LinkList, ShortenLinkForm } from "./ShortenLinkStyled";
 import { useHttp } from "../../../utils";
 import Link from "./Link";
 
@@ -83,7 +83,7 @@ export default function ShortenLink() {
           value='Shorten It!'
         />
       </ShortenLinkForm>
-      <ul style={{ marginTop: "-72px", marginBottom: "160px" }}>
+      <LinkList className="link-list">
         {shortUrls.length > 0 &&
           shortUrls.map((urlData) => (
             <Link
@@ -93,7 +93,7 @@ export default function ShortenLink() {
               setCopied={setCopiedValue}
             />
           ))}
-      </ul>
+      </LinkList>
     </>
   );
 }

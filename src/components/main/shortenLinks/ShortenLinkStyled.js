@@ -7,7 +7,7 @@ export const ShortenLinkForm = styled.form`
   justify-content: space-between;
   padding: 64px;
   background-image: url(${bgDesktop});
-  @media(max-width: 900px){
+  @media (max-width: 900px) {
     background-image: url(${bgMobile});
   }
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ export const ShortenLinkForm = styled.form`
   background-color: var(--bg-brand);
   border-radius: 12px;
   gap: 63px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   @media (max-width: 900px) {
     flex-direction: column;
     width: 90%;
@@ -30,9 +30,8 @@ export const ShortenLinkForm = styled.form`
     flex-grow: 1;
     position: relative;
     transition: margin 0.5s;
-    @media(max-width: 900px){
-      margin-bottom: ${({ error }) =>
-        error ? "2em" : "0px"};
+    @media (max-width: 900px) {
+      margin-bottom: ${({ error }) => (error ? "2em" : "0px")};
     }
     &::before {
       content: "Please add a link";
@@ -150,4 +149,9 @@ export const LinkWrapper = styled.div`
       text-align: center;
     }
   }
+`;
+
+export const LinkList = styled.ul`
+  margin-top: 32px;
+  margin-bottom: 80px;
 `;
