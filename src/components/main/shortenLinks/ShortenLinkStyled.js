@@ -30,9 +30,7 @@ export const ShortenLinkForm = styled.form`
     flex-grow: 1;
     position: relative;
     transition: margin 0.5s;
-    @media (max-width: 900px) {
-      margin-bottom: ${({ error }) => (error ? "2em" : "0px")};
-    }
+    z-index: 0;
     &::before {
       content: "Please add a link";
       font-style: italic;
@@ -45,6 +43,9 @@ export const ShortenLinkForm = styled.form`
         error ? "translateY(100%)" : "translateY(-20%)"};
       padding: 8px 0px;
       opacity: ${({ error }) => (error ? "1" : "0")};
+    }
+    @media (max-width: 900px) {
+      margin-bottom: ${({ error }) => (error ? "2em" : "0px")};
     }
   }
   #link-field {
