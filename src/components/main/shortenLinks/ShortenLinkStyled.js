@@ -29,6 +29,11 @@ export const ShortenLinkForm = styled.form`
   .input-wrapper {
     flex-grow: 1;
     position: relative;
+    transition: margin 0.5s;
+    @media(max-width: 900px){
+      margin-bottom: ${({ error }) =>
+        error ? "2em" : "0px"};
+    }
     &::before {
       content: "Please add a link";
       font-style: italic;
