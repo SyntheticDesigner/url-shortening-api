@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StatsWrapper = styled.div`
   text-align: center;
   max-width: 580px;
-  margin: min(20%, 160px) auto;
+  margin: -20px auto 20px;
   h1 {
     font-size: min(max(2vw, 2em), 3em);
     color: var(--font-color-primary);

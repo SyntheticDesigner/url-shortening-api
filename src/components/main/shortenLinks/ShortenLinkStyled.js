@@ -15,7 +15,7 @@ export const ShortenLinkForm = styled.form`
   background-color: var(--bg-brand);
   border-radius: 12px;
   gap: 63px;
-  /* transform: translateY(-50%); */
+  transform: translateY(-50%);
   @media (max-width: 900px) {
     flex-direction: column;
     width: 90%;
@@ -153,6 +153,6 @@ export const LinkWrapper = styled.div`
 `;
 
 export const LinkList = styled.ul`
-  margin-top: 32px;
+  margin-top: -74px;
   margin-bottom: 80px;
 `;
